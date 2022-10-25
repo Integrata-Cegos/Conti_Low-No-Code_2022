@@ -13,6 +13,7 @@
 * Seminarzeiten
   * Sessionbeginn 8:30, "warmup"
   * 16 Unterrichtseinheiten mit jeweils etwa 90 Minuten
-  * 9:00 - 16:15
+  * 9:00 - 16:00
   * Kaffeepausen 10:30 - 10:45 und 14:30 - 14:45
   * Mittagspause 45’ 12:15-13:00
+  * "Tear Down": 16:00 - 16:30
