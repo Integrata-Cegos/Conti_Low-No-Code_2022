@@ -1,0 +1,58 @@
+-- Erzeugen von ein paar Test-Daten
+-- Das Skript ist bereits einmal gelaufen, eine wiederholte Ausführng ist nicht möglich -> doppelte PK
+-- Zeile 2-5 müssen Sie definitiv nicht verstehen!
+DECLARE @publisherCounter INT;
+DECLARE @booksCounter INT;
+DECLARE @booksNumber INT;
+SET @publisherCounter=1;
+
+INSERT INTO AUTHORS (ID, LASTNAME, FIRSTNAME) VALUES (1, 'Mustermann', 'Hans');
+INSERT INTO AUTHORS (ID, LASTNAME, FIRSTNAME) VALUES (2, 'Müller', 'Frieda');
+INSERT INTO AUTHORS (ID, LASTNAME, FIRSTNAME) VALUES (3, 'Pausenkurt', 'Pascal');
+
+INSERT INTO ADDRESSES (ID, CITY, STREET) VALUES (1, 'München', 'Marienplatz')
+INSERT INTO ADDRESSES (ID, CITY, STREET) VALUES (2, 'Berlin', 'Alexanderplatz')
+INSERT INTO ADDRESSES (ID, CITY, STREET) VALUES (3, 'Stuttgart', 'Schlossplatz')
+
+
+INSERT INTO AUTHORS_ADDRESSES (AUTHOR_ID, ADDRESS_ID) SELECT AU.ID, AD.ID FROM AUTHORS AS AU, ADDRESSES AS AD  WHERE AU.LASTNAME = 'Pausenkurt' AND AD.CITY= 'Berlin'
+INSERT INTO AUTHORS_ADDRESSES (AUTHOR_ID, ADDRESS_ID) SELECT AU.ID, AD.ID FROM AUTHORS AS AU, ADDRESSES AS AD  WHERE AU.LASTNAME = 'Müller' AND AD.CITY= 'München'
+INSERT INTO AUTHORS_ADDRESSES (AUTHOR_ID, ADDRESS_ID) SELECT AU.ID, AD.ID FROM AUTHORS AS AU, ADDRESSES AS AD  WHERE AU.LASTNAME = 'Mustermann' AND AD.CITY= 'Stuttgart'
+
+INSERT INTO PUBLISHERS (ID, NAME) VALUES (1, 'Springer');
+INSERT INTO PUBLISHERS (ID, NAME) VALUES (2, 'Addison-Wesley');
+
+INSERT INTO BOOKS (ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID) SELECT 'ISBN:1-2-3-4-dk', 'Title1', 200, 19.99, 1, ID FROM PUBLISHERS WHERE NAME='Springer';
+INSERT INTO BOOKS (ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID) SELECT 'ISBN:1-2-3-5-dk', 'Title3', 200, 19.99, 1, ID FROM PUBLISHERS WHERE NAME='Springer';
+
+
+INSERT INTO BOOK_STATISTICS (ISBN, SOLD, SOLD_AT) VALUES('ISBN:1-2-3-4-dk', 20, '2022-10-05');
+INSERT INTO BOOK_STATISTICS (ISBN, SOLD, SOLD_AT) VALUES('ISBN:1-2-3-5-dk', 35, '2022-10-06');
+INSERT INTO BOOK_HAS_STATISTIC VALUES('ISBN:1-2-3-5-dk','ISBN:1-2-3-4-dk');
+INSERT INTO BOOK_HAS_STATISTIC VALUES('ISBN:1-2-3-5-dk','ISBN:1-2-3-4-dk');
+
+INSERT INTO PUBLISHERS_ADDRESSES (PUBLISHER_ID, ADDRESS_ID) SELECT PUB.ID, AD.ID FROM PUBLISHERS AS PUB, ADDRESSES AS AD  WHERE PUB.NAME = 'Springer' AND AD.CITY= 'Berlin'
+
+-- Den Rest müssen Sie definitiv nicht verstehen!
+
+WHILE (@publisherCounter <=3)
+BEGIN
+	INSERT INTO PUBLISHERS (ID, NAME) VALUES (@publisherCounter, 'Publisher' + CONVERT(VARCHAR, @publisherCounter));
+	SET @booksCounter=0;
+	WHILE (@booksCounter <=10)
+	BEGIN
+		SET @booksNumber=@publisherCounter*10 + @booksCounter;
+		print (@booksNumber)
+		INSERT INTO BOOKS (ISBN, TITLE, PRICE, PAGES, AVAILABLE, PUBLISHER_ID) SELECT 'Isbn:' + CONVERT(VARCHAR, @booksNumber) + '-2-3-4-fr', 'Title' + CONVERT(VARCHAR, @booksNumber), 1.99 + @booksCounter, 10*@booksCounter, 1, ID FROM PUBLISHERS WHERE NAME = 'Publisher' + CONVERT(VARCHAR, @publisherCounter);
+		IF @booksCounter IN (0,4,7,9)
+			INSERT INTO BOOKS_AUTHORS(BOOK_ID, AUTHOR_ID) select 'Isbn:' + CONVERT(VARCHAR, @booksNumber) + '-2-3-4-fr', ID FROM AUTHORS AS A WHERE A.LASTNAME='Pausenkurt'; 
+		IF @booksCounter IN (2,5,8)
+			INSERT INTO BOOKS_AUTHORS(BOOK_ID, AUTHOR_ID) select 'Isbn:' + CONVERT(VARCHAR, @booksNumber) + '-2-3-4-fr', ID FROM AUTHORS AS A WHERE A.LASTNAME='Müller'; 
+		IF @booksCounter IN (3,6,9)
+			INSERT INTO BOOKS_AUTHORS(BOOK_ID, AUTHOR_ID) select 'Isbn:' + CONVERT(VARCHAR, @booksNumber) + '-2-3-4-fr', ID FROM AUTHORS AS A WHERE A.LASTNAME='Mustermann'; 
+		
+		SET @booksCounter = @booksCounter + 1;
+	END
+	SET @publisherCounter = @publisherCounter + 1;
+END
+GO
