@@ -3,7 +3,8 @@
 --insert into AUTHORS VALUES (666, 'Aus Tirol', 'Anton')
 
 
---update BOOKS  set BOOKS.PUBLISHER_ID = PUBLISHERS.ID from PUBLISHERS  where PUBLISHERS.NAME = 'Anton'
+-- UPDATE BOOKS SET BOOKS.PUBLISHER_ID = (select top(1) PUBLISHERS.ID FROM PUBLISHERS WHERE PUBLISHERS.NAME = 'Springer') where ISBN LIKE '%-fr'
+
 -- select ID from PUBLISHERS where NAME = 'Anton'
 -- select TITLE from BOOKS where PUBLISHER_ID = 666
 
