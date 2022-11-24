@@ -8,8 +8,8 @@
   * https://github.com/Integrata-Cegos/Conti_Low-No-Code_2022
     *  Branch databases    
 * Digitales Flipchart
-  * https://docs.google.com/presentation/d/1HctmlTuq87frqowVtQGtj9FhI58qdbHpKK59fH3u558/edit?usp=sharing
-  * 
+  * [Datenbanken](https://docs.google.com/presentation/d/1HctmlTuq87frqowVtQGtj9FhI58qdbHpKK59fH3u558/edit?usp=sharing)
+  * [Software](https://docs.google.com/presentation/d/1yut_2pg3ox5ZMxEMDuehtXU7A_iSjoDStl-KLXE1knQ/edit?usp=sharing)
 * Seminarzeiten
   * Sessionbeginn 8:30, "warmup"
   * 16 Unterrichtseinheiten mit jeweils etwa 90 Minuten
