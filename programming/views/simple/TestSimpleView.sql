@@ -1,0 +1,3 @@
+--SELECT NAME FROM SIMPLE_RS ORDER BY NAME
+-- insert into SIMPLE_RS (ID, NAME) VALUES(42, 'Heaven')
+select * from PUBLISHERS
