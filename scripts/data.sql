@@ -1,6 +1,6 @@
 -- Erzeugen von ein paar Test-Daten
 -- Das Skript ist bereits einmal gelaufen, eine wiederholte Ausführng ist nicht möglich -> doppelte PK
--- Zeile 2-5 müssen Sie definitiv nicht verstehen!
+-- Zeile 4-7 müssen Sie definitiv nicht verstehen!
 DECLARE @publisherCounter INT;
 DECLARE @booksCounter INT;
 DECLARE @booksNumber INT;
