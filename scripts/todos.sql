@@ -3,7 +3,10 @@
 --insert into AUTHORS VALUES (666, 'Aus Tirol', 'Anton')
 
 
--- UPDATE BOOKS SET BOOKS.PUBLISHER_ID = (select top(1) PUBLISHERS.ID FROM PUBLISHERS WHERE PUBLISHERS.NAME = 'Springer') where ISBN LIKE '%-fr'
+UPDATE BOOKS SET BOOKS.PUBLISHER_ID = (select top(1)
+    PUBLISHERS.ID
+FROM PUBLISHERS
+WHERE PUBLISHERS.NAME = 'Springer') where ISBN LIKE '%-fr'
 
 -- select ID from PUBLISHERS where NAME = 'Anton'
 -- select TITLE from BOOKS where PUBLISHER_ID = 666
@@ -13,7 +16,7 @@
 -- Alle Bücher (also auch School und Specialist) mit Preis-Kriterium
 
 select *
-from (            SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
+from (                        SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
         FROM BOOKS
     UNION
         SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
@@ -28,7 +31,7 @@ where allbooks.PRICE > 22
 
 
 select *
-from (            SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, 'book' as Type
+from (                        SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, 'book' as Type
         FROM BOOKS
         WHERE PAGES > 400
     UNION
@@ -46,7 +49,7 @@ ORDER BY PAGES ASC
 
 select top (10)
     *
-from (            SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
+from (                        SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
         FROM BOOKS
     UNION
         SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
@@ -60,7 +63,7 @@ order by price DESC
 -- titel > 30 zeichen
 
 select *
-from (            SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
+from (                        SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
         FROM BOOKS
     UNION
         SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
@@ -74,7 +77,7 @@ where len(allbooks.title) > 30
 -- Zeichenkette vorhanden, diesmal ohne LIKE
 
 select title
-from (            SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
+from (                        SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
         FROM BOOKS
     UNION
         SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
@@ -88,7 +91,7 @@ where PATINDEX('%rett%', title) > 0
 -- Der höchste Buch-Preis
 
 select max(price)
-from (            SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
+from (                        SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
         FROM BOOKS
     UNION
         SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
@@ -101,7 +104,7 @@ from (            SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
 -- Der niedrigste Buch-Preis
 
 select min(price)
-from (            SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
+from (                        SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
         FROM BOOKS
     UNION
         SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
@@ -115,7 +118,7 @@ from (            SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
 -- die Bücher mit dem niedrigsten Preis
 
 select *
-from (            SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
+from (                        SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
         FROM BOOKS
     UNION
         SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
@@ -139,7 +142,7 @@ from (            SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
 
 
 select *
-from (                        SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
+from (                                    SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
         FROM BOOKS
     UNION
         SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
@@ -149,7 +152,7 @@ from (                        SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLI
         FROM SCHOOLBOOKS 
 ) as allBooks
 where price = (select max(price)
-from (                                    SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
+from (                                                SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
         FROM BOOKS
     UNION
         SELECT ISBN, TITLE, PAGES, PRICE, AVAILABLE, PUBLISHER_ID
