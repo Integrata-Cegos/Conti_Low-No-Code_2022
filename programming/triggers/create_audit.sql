@@ -1,0 +1,1 @@
+create table AUDIT_MESSAGES (MESSAGE varchar(1024))
