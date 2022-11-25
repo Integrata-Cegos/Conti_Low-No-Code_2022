@@ -1,12 +1,9 @@
-input = prompt("Number of items:")
+input = prompt()
 itemCount = parseInt(input)
-if (itemCount != NaN && itemCount > 0){
-    itemPrice = 42 
+if (itemCount > 0){
+    itemPrice = 42
     totalPrice = itemPrice * itemCount
-    totalPriceOutput = "Total price: " + totalPrice
-    console.log(totalPriceOutput)
-    
-}
-else{
-    console.log(input + " is not a positive number")
+    console.log("Total price is " + totalPrice)
+}else{
+    console.log("invalid input")
 }
