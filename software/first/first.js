@@ -1,9 +1,9 @@
 //Kommentarzeile
 //Deklaration von Variablen
-welcomeMessage = "Hello World"
-itemCount = 20
-itemPrice = 42
-//Aufruf der log-Funktion der Konsole mit dem Parameter Zeichenkette "Hello World!!!"
-console.log("Hello World!!!")
-//Aufruf der log-Funktion der Konsole mit dem Parameter welcomeMessage
+welcomeMessage = "Hello to Training Application"
 console.log(welcomeMessage)
+itemCount = 20 //Später: kann eine Eingabe sein
+itemPrice = 42 //Später: kann eine Eingabe sein
+totalPrice = 20*42
+result = "TotalPrice: " + totalPrice
+console.log(result)
