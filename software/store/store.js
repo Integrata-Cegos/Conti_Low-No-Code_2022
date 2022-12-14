@@ -9,6 +9,7 @@ function userInput(){
     } else {
         resultElement.value = "invalid input"
     }
+    inputElement.value = ""
 }
 
 function calculatePrice(numberOfItems){
