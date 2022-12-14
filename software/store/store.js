@@ -1,15 +1,21 @@
+let doAgain = ""
+let discounts = {
+    no: 0,
+    low: 0.05,
+    high: 0.1
+}
 do {
-    input = prompt()
-    itemCount = parseInt(input)
+    let input = prompt()
+    let itemCount = parseInt(input)
     if (itemCount > 0) {
-        discount = 0
+        let discount = discounts.no
         if (itemCount >= 10 && itemCount < 20) {
-            discount = 0.05
+            discount = discounts.low
         } else if (itemCount >= 20) {
-            discount = 0.1
+            discount = discounts.high
         }
-        itemPrice = 42
-        totalPrice = itemPrice * itemCount * (1 - discount)
+        let itemPrice = 42
+        let totalPrice = itemPrice * itemCount * (1 - discount)
         console.log("Total price is " + totalPrice)
     } else {
         console.log("invalid input")
