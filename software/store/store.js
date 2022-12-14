@@ -1,12 +1,3 @@
-function loop(){
-    let doAgain = ""
-    let exitMessage = "no"
-    do {
-        userInput()
-        doAgain = prompt("again? - enter " + exitMessage + " to exit program")
-    } while (doAgain != exitMessage);
-}
-
 function userInput(){
     let input = prompt()
     let itemCount = parseInt(input)
@@ -35,5 +26,3 @@ function calculatePrice(numberOfItems){
     return totalPrice
 
 }
-
-loop()
