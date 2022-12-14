@@ -1,11 +1,4 @@
-function loop*(){
-    let doAgain = ""
-    do {
-        userInput()
-        doAgain = prompt("again? - no to exit")
-    } while (doAgain != "no");
-}
-function userInput(){
+function userInput() {
     let input = prompt()
     let itemCount = parseInt(input)
     if (itemCount > 0) {
@@ -16,7 +9,7 @@ function userInput(){
     }
 
 }
-function calculatePrice(numberOfItems){
+function calculatePrice(numberOfItems) {
     let discounts = {
         no: 0,
         low: 0.05,
@@ -32,5 +25,3 @@ function calculatePrice(numberOfItems){
     let totalPrice = itemPrice * numberOfItems * (1 - discount)
     return totalPrice
 }
-
-loop()
