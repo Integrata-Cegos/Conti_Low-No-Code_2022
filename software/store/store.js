@@ -14,7 +14,7 @@ do {
         } else if (itemCount >= 20) {
             discount = discounts.high
         }
-        let itemPrice = 42
+        let itemPrice = 10
         let totalPrice = itemPrice * itemCount * (1 - discount)
         console.log("Total price is " + totalPrice)
     } else {
