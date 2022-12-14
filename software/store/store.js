@@ -1,6 +1,7 @@
+let inputElement = document.getElementById("input")
+let resultElement = document.getElementById("result")
+
 function userInput(){
-    let inputElement = document.getElementById("input")
-    let resultElement = document.getElementById("result")
     let input = inputElement.value
     let itemCount = parseInt(input)
     if (itemCount > 0) {
@@ -9,6 +10,11 @@ function userInput(){
     } else {
         resultElement.value = "invalid input"
     }
+}
+
+function clearInput(){
+    inputElement.value = ""
+
 }
 
 function calculatePrice(numberOfItems){
@@ -28,4 +34,5 @@ function calculatePrice(numberOfItems){
     return totalPrice
 
 }
+
 
