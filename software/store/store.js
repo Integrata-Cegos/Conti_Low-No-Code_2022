@@ -1,11 +1,13 @@
 function userInput(){
-    let input = prompt()
+    let inputElement = document.getElementById("input")
+    let resultElement = document.getElementById("result")
+    let input = inputElement.value
     let itemCount = parseInt(input)
     if (itemCount > 0) {
         let totalPrice = calculatePrice(itemCount)
-        console.log("Total price is " + totalPrice)
+        resultElement.value = "Total price is " + totalPrice
     } else {
-        console.log("invalid input")
+        resultElement.value = "invalid input"
     }
 }
 
@@ -21,8 +23,9 @@ function calculatePrice(numberOfItems){
     } else if (numberOfItems >= 20) {
         discount = discounts.high
     }
-    let itemPrice = 10
+    let itemPrice = 42
     let totalPrice = itemPrice * numberOfItems * (1 - discount)
     return totalPrice
 
 }
+
