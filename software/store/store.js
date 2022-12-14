@@ -8,6 +8,7 @@ do {
     let input = prompt()
     let itemCount = parseInt(input)
     if (itemCount > 0) {
+        let discount = 0
         discount = discounts.no
         if (itemCount >= 10 && itemCount < 20) {
             discount = discounts.low
