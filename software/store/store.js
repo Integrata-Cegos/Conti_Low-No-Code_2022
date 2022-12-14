@@ -21,7 +21,7 @@ function calculatePrice(numberOfItems){
     } else if (numberOfItems >= 20) {
         discount = discounts.high
     }
-    let itemPrice = 42
+    let itemPrice = 10
     let totalPrice = itemPrice * numberOfItems * (1 - discount)
     return totalPrice
 
