@@ -1,13 +1,18 @@
 let doAgain = ""
+let discounts = {
+    no: 0,
+    low: 0.05,
+    high: 0.1
+}
 do {
     let input = prompt()
     let itemCount = parseInt(input)
     if (itemCount > 0) {
-        let discount = 0
+        discount = discounts.no
         if (itemCount >= 10 && itemCount < 20) {
-            discount = 0.05
+            discount = discounts.low
         } else if (itemCount >= 20) {
-            discount = 0.1
+            discount = discounts.high
         }
         let itemPrice = 42
         let totalPrice = itemPrice * itemCount * (1 - discount)
