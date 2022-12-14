@@ -1,6 +1,6 @@
 let doAgain = ""
 let discounts = {
-    no: 0,
+    no: 1,
     low: 0.05,
     high: 0.1
 }
