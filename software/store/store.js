@@ -16,10 +16,10 @@ do {
         }
         let itemPrice = 42
         let totalPrice = itemPrice * itemCount * (1 - discount)
-        console.log("Ordered quantity: " + itemCount)
-        console.log("Actual price: " + itemPrice * itemCount)
-        console.log("Discount is: " + discount * totalPrice)
-        console.log("Total price is: " + totalPrice) 
+        console.log("Ordered quantity:      " + itemCount)
+        console.log("Actual price:          " + itemPrice * itemCount)
+        console.log("Discount is:           " + discount * totalPrice)
+        console.log("Total price is:        " + totalPrice) 
     } else {
         console.log("invalid input")
     }
