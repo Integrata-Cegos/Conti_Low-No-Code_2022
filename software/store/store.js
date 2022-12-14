@@ -15,4 +15,4 @@ do {
         console.log("invalid input")
     }
     doAgain = prompt("again?")
-} while (doAgain != "exit");
+} while (doAgain != "no");
