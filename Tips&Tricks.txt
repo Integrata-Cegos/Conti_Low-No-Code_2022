@@ -2,3 +2,6 @@ Tips and Tricks:
 
 VS-Code:
 
+HTML:
+
+JS:
