@@ -6,7 +6,7 @@ function userInput(){
     let itemCount = parseInt(input)
     if (itemCount > 0) {
         let totalPrice = calculatePrice(itemCount)
-        resultElement.value = "Total price: "+ itemcount + "articles with id " + "cost "+ totalPrice
+        resultElement.value = "Total price: "+ inputElement.value + "articles with id " + "cost "+ totalPrice
     } else {
         resultElement.value = "invalid input"
     }
