@@ -15,7 +15,7 @@ console.log(discounts.high) //Was wird hier ausgegeben? 2 Möglichkeiten: 0.1 od
 
 function playWithDiscounts(d){
     d.low = 0.01
-    console.log(d.low)
+    console.log(d.low+"in fkt")
 }
 
 console.log(discounts.low+"vor") //Was wird hier ausgegeben?
