@@ -10,7 +10,7 @@ let discounts2 = discounts
 
 discounts2.high = 0.2
 
-console.log(discounts2.high) +'disc2'//Ausgabe des geänderten Rabatts
+console.log(discounts2.high) +"disc2"//Ausgabe des geänderten Rabatts
 console.log(discounts.high) //Was wird hier ausgegeben? 2 Möglichkeiten: 0.1 oder 0.2
 
 function playWithDiscounts(d){
