@@ -16,7 +16,6 @@ function clearInput(){
     inputElement.value = ""
 
 }
-
 function calculatePrice(numberOfItems){
     let discounts = {
         no: 0,
