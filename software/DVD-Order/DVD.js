@@ -12,5 +12,5 @@ function calculatePrice(){
 }
 
 function createTotalPriceMessage(articleId, numberOfArticles, totalPrice){
-    return `BESTELLUNG: ${numberOfArticles} x Artikel ${articleId} GESAMTPREIS: ${totalPrice}` 
+    return ` ${numberOfArticles} x Artikel ${articleId} GESAMTPREIS: ${totalPrice}` 
 }
