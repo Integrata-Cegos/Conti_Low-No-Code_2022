@@ -4,3 +4,7 @@ body {
 h3 {
     color: rgb(124, 114, 114);
 }
+
+#totalPrice{
+    width: 50%;
+}
