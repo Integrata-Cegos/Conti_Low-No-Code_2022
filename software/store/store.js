@@ -34,4 +34,3 @@ function calculatePrice(numberOfItems){
     return totalPrice
 
 }
-
