@@ -18,5 +18,6 @@ function playWithDiscounts(d){
     console.log(d.low)
 }
 
+console.log(discounts.low+"vor") //Was wird hier ausgegeben?
 playWithDiscounts(discounts) //Was wird hier ausgegeben?
-console.log(discounts.low) //Was wird hier ausgegeben?
+console.log(discounts.low+"nach") //Was wird hier ausgegeben?
