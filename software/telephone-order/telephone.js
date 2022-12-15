@@ -13,7 +13,7 @@ function calculatePrice(){
 
 function createTotalPriceMessage(articleId, numberOfArticles, totalPrice){
     return "total price: " +numberOfArticles + " articles with id " + articleId +" cost: " +totalPrice 
-   rs  return `total price: ${numberOfArticles} articles with id ${articleId} cost: ${totalPrice}` 
+   
 }
 
 
