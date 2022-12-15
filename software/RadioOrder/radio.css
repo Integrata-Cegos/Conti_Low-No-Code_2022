@@ -1,0 +1,10 @@
+body {
+    background-color: rgb(255, 165, 0);
+}
+h2 {
+    text-align: center;
+}
+
+#totalPrice{
+    width: 30%;
+}
