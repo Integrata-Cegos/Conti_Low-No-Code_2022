@@ -1,6 +1,10 @@
 body {
     background-color: yellow;
 }
-h3 {
-    color: blue;
+h2 {
+    text-align: center;
+}
+
+#totalPrice{
+    width: 50%;
 }
