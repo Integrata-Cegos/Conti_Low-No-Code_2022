@@ -30,7 +30,7 @@ function calculatePrice(numberOfItems){
     //     discount = discounts.high
     // }
     // let itemPrice = 42
-    let totalPrice = 42,01
+    let totalPrice = 42
 
     // let totalPrice = itemPrice * numberOfItems * (1 - discount)
     return totalPrice
