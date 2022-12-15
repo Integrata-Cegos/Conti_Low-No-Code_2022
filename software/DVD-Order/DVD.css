@@ -1,0 +1,9 @@
+body {
+    background-color: rgb(241, 234, 233);
+}
+h3 {
+    color: blue;
+}
+#totalPrice{
+    width: 50%;
+}
