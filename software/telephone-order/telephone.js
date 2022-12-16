@@ -4,17 +4,21 @@ let totalPriceOutput = document.getElementById("totalPrice")
 
 function calculatePrice(){
     let articleId = articleIdInput.value
+    let articlePrice = articleId
+    let article=articles[articleId]
     let numberOfArticles = parseInt(numberOfArticlesInput.value)
-    let totalPrice = 100*numberOfArticles 
-    totalPrice=applydiscount(totalPrice)
-    let result = createTotalPriceMessage(articleId, numberOfArticles, totalPrice)
-    totalPriceOutput.value = result
-
-}
-
-function createTotalPriceMessage(articleId, numberOfArticles, totalPrice){
-    return "total price: " +numberOfArticles + " articles with id " + articleId +" cost: " +totalPrice 
-   
+    
+    if (article) {
+        let totalPrice = article.price//articles[articleId].price//articlePrice 
+        totalPrice = totalPrice*numberOfArticles 
+            
+        totalPrice=applydiscount(totalPrice)
+        let result = "total price: " +numberOfArticles + " articles (t-phones) with id " + articleId +" cost: " +totalPrice
+        totalPriceOutput.value = result
+    }
+    else{
+        totalPriceOutput.value='article/t-phone not existing/found'
+    }
 }
 
 
