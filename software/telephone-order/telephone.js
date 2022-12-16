@@ -5,8 +5,8 @@ let totalPriceOutput = document.getElementById("totalPrice")
 function calculatePrice(){
     let articleId = articleIdInput.value
     let numberOfArticles = parseInt(numberOfArticlesInput.value)
-    let totalPrice = 100   
-    totalprice=applydiscount(totalprice*numberOfArticles)
+    let totalPrice = 100*numberOfArticles 
+    totalprice=applydiscount(totalprice)
     let result = createTotalPriceMessage(articleId, numberOfArticles, totalPrice)
     totalPriceOutput.value = result
 
