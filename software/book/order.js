@@ -10,5 +10,4 @@ const order = {
     createTotalPriceMessage: function (articleId, numberOfArticles, totalPrice) {
         return `total price: ${numberOfArticles} articles with id ${articleId} cost: ${totalPrice}`
     }
-
 }
