@@ -1,11 +1,12 @@
 let articleIdInput = document.getElementById("articleId")
 let quantityInput = document.getElementById("quantity")
 let totalPriceOutput = document.getElementById("result")
-
+const articlePrice = 100
 function calculatePriceTV(){
     let articleId = articleIdInput.value
     let quantity = parseInt(quantityInput.value)
-    let result = 42
+    let result = quantity * articlePrice
+    result = applyDiscount(result)
     let totalPrice = createTotalPriceMessage(articleId, quantity, result)
     totalPriceOutput.value = totalPrice
 
