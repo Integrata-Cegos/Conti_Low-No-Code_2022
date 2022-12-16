@@ -1,22 +1,11 @@
-let articleIDInput = document.getElementById("articleId")
-let articleNumberInput = document.getElementById("articleNumber")
-let totalPriceOutput = document.getElementById("totalPrice")
-
-
-
-function calculatePrice(){
-    let articleId = articleIDInput.value
-    let articleNumber = parseInt(articleNumberInput.value)
-    let totalPrice = 42
-    let result = createTotalPriceMessage(articleId, articleNumber, totalPrice)
-    totalPriceOutput.value = result
+const computer = {
+    articleIdInput: document.getElementById("articleId"),
+    numberOfArticlesInput: document.getElementById("numberOfArticles"),
+    totalPriceOutput: document.getElementById("totalPrice"),
+    doOrder: function(){
+        let articleId = this.articleIdInput.value
+        let numberOfArticles = parseInt(this.numberOfArticlesInput.value)
+        let totalPriceMessage = order.calculatePrice(articleId, numberOfArticles)
+        this.totalPriceOutput.value = totalPriceMessage
+    }
 }
-
-
-
-function createTotalPriceMessage(articleId, articleNumber, totalPrice){
-    return `total price for ${articleNumber}  ${articleId}  is  ${totalPrice}`  // Achtung, kein normales Hochkomma
-}
-
-
-
