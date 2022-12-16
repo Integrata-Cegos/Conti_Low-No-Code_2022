@@ -8,10 +8,15 @@
 <body>
     <h3>Order CDs</h3>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Compact_Disc.jpg/1024px-Compact_Disc.jpg" height="100" width="100"/>
+    <label for="item">Item number:</label>
     <input id="item" type="text" />
-    <input id="quantity"  type="text" />
-    <button onclick="calculatePrice()" >Order</button>
+    <label for="quantity">Order quantity:</label>
+    <input id="quantity"  type="number" />
+    <button onclick="cd.doOrder()" >Order</button>
     <input id="totalPrice" type="text" />
 </body>
 <script type="text/javascript" src="cdOrder.js"></script>
+<script type="text/javascript" src="Order.js"></script>
+<script type="text/javascript" src="CDdiscount.js"></script>
+<script type="text/javascript" src="articles.js"></script>
 </html>

@@ -1,16 +1,14 @@
-let resultElement = document.getElementById("totalPrice")
-let inputQuantity = document.getElementById("quantity")
-let inputItem = document.getElementById("item") 
+const cd = {
 
-function calculatePrice() {
-    let input = inputQuantity.value
-    let itemCount = parseInt(input)
-    let totalPrice = 42
-    let result  = createTotalPriceMessage(inputItem, itemCount, totalPrice)
-    resultElement.value = result
+resultElement: document.getElementById("totalPrice"),
+inputQuantity: document.getElementById("quantity"),
+inputItem: document.getElementById("item"),
+
+doOrder: function(){
+    let articleId = this.inputItem.value
+    let numberOfArticles = parseInt(this.inputQuantity.value)
+    let totalPriceMessage = order.calculatePrice(articleId, numberOfArticles)
+    this.resultElement.value = totalPriceMessage
+
 }
-    
-function createTotalPriceMessage(inputItem, itemCount, totalPrice){
-    return `total price: ${itemCount} articles with id ${inputItem} cost: ${totalPrice}` 
 }
-    
