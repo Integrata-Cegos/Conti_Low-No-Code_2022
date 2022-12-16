@@ -1,38 +1,17 @@
-let inputOrderId = document.getElementById("orderId")
-let inputNumber = document.getElementById("number")
-let resultElement = document.getElementById("result")
-
-function userInput(){
-    let input = inputNumber.value
-    let id = inputOrderId.value
-    let itemCount = parseInt(input)
-    if (itemCount > 0) {
-        let totalPrice = calculatePrice(itemCount)
-        resultElement.value = "Total price: " + input + " articles with id " + id + " cost:" + totalPrice + " Euro "
-    } else {
-        resultElement.value = "invalid input"
-    }
-}
-
-function clearInput(){
-    inputElement.value = ""
+let articleIdInput = document.getElementById("articleId")
+let numberOfArticlesInput = document.getElementById("numberOfArticles")
+let totalPriceOutput = document.getElementById("totalPrice")
+const articlePrice = 100
+function calculatePrice(){
+    let articleId = articleIdInput.value
+    let numberOfArticles = parseInt(numberOfArticlesInput.value)
+    let totalPrice = numberOfArticles * articlePrice
+    totalPrice = discount.apply(totalPrice)
+    let totalPriceMessage = createTotalPriceMessage(articleId, numberOfArticles, totalPrice)
+    totalPriceOutput.value = totalPriceMessage
 
 }
 
-function calculatePrice(numberOfItems){
-    let discounts = {
-        no: 0,
-        low: 0,
-        high: 0
-    }
-    let discount = discounts.no
-    if (numberOfItems >= 10 && numberOfItems < 20) {
-        discount = discounts.low
-    } else if (numberOfItems >= 20) {
-        discount = discounts.high
-    }
-    let itemPrice = 42
-    let totalPrice = itemPrice * numberOfItems * (1 - discount)
-    return totalPrice
-
+function createTotalPriceMessage(articleId, numberOfArticles, totalPrice){
+    return `total price: ${numberOfArticles} articles with id ${articleId} cost: ${totalPrice}` 
 }
