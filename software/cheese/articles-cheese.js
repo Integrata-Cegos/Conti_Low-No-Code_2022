@@ -9,4 +9,4 @@ const articles = {
 //if (article) {let articlePrice = article.price
 //console.log (articlePrice)}
 //else
-//console.log ("Artikel nicht gefunden")
+//console.log ("Artikel nicht gefunden") ...
