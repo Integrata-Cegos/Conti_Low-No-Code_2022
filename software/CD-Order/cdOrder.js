@@ -1,12 +1,14 @@
-let resultElement = document.getElementById("totalPrice")
-let inputQuantity = document.getElementById("quantity")
-let inputItem = document.getElementById("item") 
+const cd = {
 
-function doOrder(){
-    let articleId = inputItem.value
-    let numberOfArticles = parseInt(inputQuantity.value)
+resultElement: document.getElementById("totalPrice")
+inputQuantity: document.getElementById("quantity")
+inputItem: document.getElementById("item") 
+
+doOrder: function(){
+    let articleId = this.inputItem.value
+    let numberOfArticles = parseInt(this.inputQuantity.value)
     let totalPriceMessage = order.calculatePrice(articleId, numberOfArticles)
-    resultElement.value = totalPriceMessage
+    this.resultElement.value = totalPriceMessage
 
 }
-  
+}
