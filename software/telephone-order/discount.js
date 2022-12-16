@@ -1,5 +1,5 @@
 let discount ={
-    no: 0, low: 0.05, high: 0.1
+    no: 0, low: 0.05, high: 0.1,
     lowlimit:400, highlimit:1000
 }
 
