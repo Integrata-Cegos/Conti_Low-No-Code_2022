@@ -1,16 +1,10 @@
 let articleIdInput = document.getElementById("articleId")
 let numberOfArticlesInput = document.getElementById("numberOfArticles")
 let totalPriceOutput = document.getElementById("totalPrice")
-
-function calculatePrice(){
+function doOrder(){
     let articleId = articleIdInput.value
     let numberOfArticles = parseInt(numberOfArticlesInput.value)
-    let totalPrice = 42
-    let result = createTotalPriceMessage(articleId, numberOfArticles, totalPrice)
-    totalPriceOutput.value = result
+    let totalPriceMessage = order.calculatePrice(articleId, numberOfArticles)
+    totalPriceOutput.value = totalPriceMessage
 
-}
-
-function createTotalPriceMessage(articleId, numberOfArticles, totalPrice){
-    return ` ${numberOfArticles} x Artikel ${articleId} GESAMTPREIS: ${totalPrice}` 
 }
