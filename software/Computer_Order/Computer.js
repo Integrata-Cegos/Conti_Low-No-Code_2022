@@ -1,22 +1,19 @@
-let articleIDInput = document.getElementById("articleId")
-let articleNumberInput = document.getElementById("articleNumber")
+let articleIdInput = document.getElementById("articleId")
+let numberOfArticlesInput = document.getElementById("numberOfArticles")
 let totalPriceOutput = document.getElementById("totalPrice")
 
-
+const articlePrice = 100
 
 function calculatePrice(){
-    let articleId = articleIDInput.value
-    let articleNumber = parseInt(articleNumberInput.value)
-    let totalPrice = 42
-    let result = createTotalPriceMessage(articleId, articleNumber, totalPrice)
-    totalPriceOutput.value = result
+    let articleId = articleIdInput.value
+    let numberOfArticles = parseInt(numberOfArticlesInput.value)
+    let totalPrice = numberOfArticles * articlePrice
+    totalPrice = applyDiscount(totalPrice)
+    let totalPriceMessage = createTotalPriceMessage(articleId, numberOfArticles, totalPrice)
+    totalPriceOutput.value = totalPriceMessage
+
 }
 
-
-
-function createTotalPriceMessage(articleId, articleNumber, totalPrice){
-    return `total price for ${articleNumber}  ${articleId}  is  ${totalPrice}`  // Achtung, kein normales Hochkomma
+function createTotalPriceMessage(articleId, numberOfArticles, totalPrice){
+    return `total price: ${numberOfArticles} articles with id ${articleId} cost: ${totalPrice}` 
 }
-
-
-
