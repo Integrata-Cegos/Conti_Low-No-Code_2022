@@ -4,7 +4,7 @@ const order = {
         if (article) {
             let result = quantity * article.price
             result = discount.apply(result)
-            let totalPriceMessage = this.createTotalPriceMessage(articleId, quantity, result)
+            let totalPriceMessage = this.createTotalPriceMessage(articleId, article, quantity, result)
             return totalPriceMessage
         }
         else {
@@ -12,8 +12,8 @@ const order = {
         }
 
     },
-    createTotalPriceMessage: function (article, quantity, result) {
-        return `total price: ${quantity} articles: ${article.description} cost: ${result} EURO`
+    createTotalPriceMessage: function (articleId, article, quantity, result) {
+        return `total price: ${quantity} articles: ${articleId}=${article.description} cost: ${result}`
     }
 
 }
