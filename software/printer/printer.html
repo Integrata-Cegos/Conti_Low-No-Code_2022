@@ -2,18 +2,19 @@
 
 <head>
     <title>Javacream</title>
-    <link rel="stylesheet" href="printer.css">
+    <link rel="stylesheet" href="view_printer/printer.css">
 </head>
 
 <body>
-    <h2>Order Drucker</h2>
-    <img src="th.jpg"
+    <h2>Order Printer</h2>
+    <img src="view_printer/th.jpg" height="100" width="100"/>
+<hr />
     <input id="articleId" type="text" />
     <input id="numberOfArticles" type="text" />
-    <button onclick="calculatePrice()">Order</button>
+    <button onclick="printer.doOrder()">Order</button>
     <input id="totalPrice" type="text" />
 </body>
-<script type="text/javascript" src="printer.js"></script>
-<script type="text/javascript" src="discount.js"></script>
-<script type="text/javascript" src="order.js"></script>
+<script type="text/javascript" src="view_printer/printer.js"></script>
+<script type="text/javascript" src="app_printer/order.js"></script>
+<script type="text/javascript" src="app_printer/discount.js"></script>
 </html>
