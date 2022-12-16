@@ -7,8 +7,7 @@ function applydiscount(totalprice){
     let price=totalprice
     if (totalprice>=discount.highlimit){
         price=totalprice*(1-discount.high)
-    }
-    elseif (totalprice>=discount.lowlimit){
+    }elseif (totalprice>=discount.lowlimit){
         price=totalprice*(1-discount.low)
     }  
 return price;
