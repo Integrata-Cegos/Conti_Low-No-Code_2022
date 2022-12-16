@@ -13,7 +13,7 @@ const order = {
 
     },
     createTotalPriceMessage: function (articleId, article, numberOfArticles, totalPrice) {
-        return `total price: ${numberOfArticles} articles id ${articleId}=${article.description} cost: ${totalPrice}`
+        return `total price: ${numberOfArticles} articles  ${articleId} = ${article.description} cost: ${totalPrice}`
     }
 
 }

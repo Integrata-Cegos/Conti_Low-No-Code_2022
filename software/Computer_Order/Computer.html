@@ -9,10 +9,26 @@
     <h3>Computer Order</h3>
     <img src="OIP.jfif" height="200" width="200"/>
     <hr />
-    <input id="articleId" type="text" />
+    <span class="label article id">Article ID</span>
+        <div class="dropup">
+        <input id="articleId" type="text" />
+        <div class="dropup-content">
+          <a href="#">Available:</a>
+          <a href="#">             'id-001'</a>
+          <a href="#">             'id-002'</a>
+          <a href="#">             'id-003'</a>
+          <a href="#"></a>
+          <a href="#">! other IDs are on backorder due to global supply chain disruptions, sorry !</a>
+        </div>
+      </div>
+
+    <hr />
+    <span class="label article nr">How many?</span>
     <input id="numberOfArticles" type="text" />
+    <hr />
+    <hr />
     <button onclick="computer.doOrder()">Order</button>
-    <input id="totalPrice" type="text">
+    <output id="totalPrice" type="text">
 </body>
 <script type="text/javascript" src="Computer.js"></script>
 <script type="text/javascript" src="order.js"></script>
