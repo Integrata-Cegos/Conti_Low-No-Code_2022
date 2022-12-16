@@ -6,7 +6,7 @@ function calculatePrice(){
     let articleId = articleIdInput.value
     let numberOfArticles = parseInt(numberOfArticlesInput.value)
     let totalPrice = 100*numberOfArticles 
-    // totalprice=applydiscount(totalprice)
+    totalprice=applydiscount(totalprice)
     let result = createTotalPriceMessage(articleId, numberOfArticles, totalPrice)
     totalPriceOutput.value = result
 
