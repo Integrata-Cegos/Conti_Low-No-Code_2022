@@ -12,6 +12,7 @@ function applydiscount(totalprice){
         price=totalprice*(1-discount.low)
     }  
 return price;
+console.log price
 }
 
 
