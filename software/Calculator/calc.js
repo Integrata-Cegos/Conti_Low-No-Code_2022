@@ -1,16 +1,17 @@
 let articleIdInput = document.getElementById("articleId")
-let countInput = document.getElementById("count")
+let numberOfArticlesInput = document.getElementById("numberOfArticles")
 let totalPriceOutput = document.getElementById("totalPrice")
-
+const articlePrice = 100
 function calculatePrice(){
     let articleId = articleIdInput.value
-    let count = parseInt(countInput.value)
-    let totalPrice = 42
-    let result = createTotalPriceMessage(articleId, count, totalPrice)
-    totalPriceOutput.value = result
+    let numberOfArticles = parseInt(numberOfArticlesInput.value)
+    let totalPrice = numberOfArticles * articlePrice
+    totalPrice = discount.apply(totalPrice)
+    let totalPriceMessage = createTotalPriceMessage(articleId, numberOfArticles, totalPrice)
+    totalPriceOutput.value = totalPriceMessage
 
 }
 
-function createTotalPriceMessage(articleId, count, totalPrice){
-    return `total price: ${count} ${articleId} total cost: EUR ${totalPrice}` 
+function createTotalPriceMessage(articleId, numberOfArticles, totalPrice){
+    return `total price: ${numberOfArticles} article ${articleId} cost: ${totalPrice}` 
 }
