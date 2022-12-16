@@ -8,10 +8,23 @@
 <body>
     <h2>DVD Order</h2>
     <img src="DVD-Rohlinge.jpg" height="100" width="100"/>
-    <input id="articleId" type="text" />
+    <form action="/action_page.php"></form>
+    <label for="articleId">Auswahl Artikel:</label>
+    <select name="articleId" id="articleId">
+    <option value="id1">ECH</option>
+    <option value="id2">Indians</option>
+    <option value="id3">Bester Sport der Welt</option>
+    <option value="id4">Derby des Jahrhunderts</option>
+    <option value="id5">Eishockey Regeln</option>
+    <option value="id6">Schiedsrichter oder Streifenhoernchen</option>
+    </select>
+
     <input id="numberOfArticles" type="text" />
-    <button onclick="calculatePrice()">BESTELLUNG</button>
+    <button onclick="dvd.doOrder()">Order</button>
     <input id="totalPrice" type="text" />
 </body>
 <script type="text/javascript" src="DVD.js"></script>
+<script type="text/javascript" src="order.js"></script>
+<script type="text/javascript" src="discount.js"></script>
+<script type="text/javascript" src="articles.js"></script>
 </html>
