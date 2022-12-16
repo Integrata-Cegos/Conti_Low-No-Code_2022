@@ -1,14 +1,19 @@
 const order = {
-    articlePrice: 100,
     calculatePrice: function (articleId, numberOfArticles) {
-        let totalPrice = numberOfArticles * this.articlePrice
-        totalPrice = discount.apply(totalPrice)
-        let totalPriceMessage = this.createTotalPriceMessage(articleId, numberOfArticles, totalPrice)
-        return totalPriceMessage
+        let article = articles[articleId]
+        if (article) {
+            let totalPrice = numberOfArticles * article.price
+            totalPrice = discount.apply(totalPrice)
+            let totalPriceMessage = this.createTotalPriceMessage(articleId, article, numberOfArticles, totalPrice)
+            return totalPriceMessage
+        }
+        else{
+            return `article with id ${articleId} not found`
+        }
 
     },
-    createTotalPriceMessage: function (articleId, numberOfArticles, totalPrice) {
-        return `total price: ${numberOfArticles} articles with id ${articleId} cost: ${totalPrice}`
+    createTotalPriceMessage: function (articleId, article, numberOfArticles, totalPrice) {
+        return `total price: ${numberOfArticles} articles id ${articleId}=${article.description} cost: ${totalPrice}`
     }
 
 }

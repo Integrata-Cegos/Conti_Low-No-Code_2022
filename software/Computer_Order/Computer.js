@@ -1,10 +1,11 @@
-let articleIdInput = document.getElementById("articleId")
-let numberOfArticlesInput = document.getElementById("numberOfArticles")
-let totalPriceOutput = document.getElementById("totalPrice")
-function doOrder(){
-    let articleId = articleIdInput.value
-    let numberOfArticles = parseInt(numberOfArticlesInput.value)
-    let totalPriceMessage = order.calculatePrice(articleId, numberOfArticles)
-    totalPriceOutput.value = totalPriceMessage
-
+const computer = {
+    articleIdInput: document.getElementById("articleId"),
+    numberOfArticlesInput: document.getElementById("numberOfArticles"),
+    totalPriceOutput: document.getElementById("totalPrice"),
+    doOrder: function(){
+        let articleId = this.articleIdInput.value
+        let numberOfArticles = parseInt(this.numberOfArticlesInput.value)
+        let totalPriceMessage = order.calculatePrice(articleId, numberOfArticles)
+        this.totalPriceOutput.value = totalPriceMessage
+    }
 }
