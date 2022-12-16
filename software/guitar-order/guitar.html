@@ -11,13 +11,18 @@
     <img src="view/233383_1.jpg" height="100" width="100"/>
     <img src="https://hebasound.de/media/image/product/1719/lg/yamaha-f-310.jpg" height="100" width="100"/>
     <hr />
-    <input id="articleId" type="text" />
-    <input id="numberOfArticles" type="text" />
+    <label for="articeleId">Id:</label>
+    <select id="articleId" />
+    <label for="numberOfArticles">Number of items:</label>
+    <input id="numberOfArticles" type="number" />
     <button onclick="guitar.doOrder()">Order</button>
-    <input id="totalPrice" type="text" />
+    <ul id="orders">
+
+    </ul>
+
 </body>
-<script type="text/javascript" src="view/guitar.js"></script>
 <script type="text/javascript" src="app/order.js"></script>
 <script type="text/javascript" src="app/discount.js"></script>
 <script type="text/javascript" src="app/articles.js"></script>
+<script type="text/javascript" src="view/guitar.js"></script>
 </html>
