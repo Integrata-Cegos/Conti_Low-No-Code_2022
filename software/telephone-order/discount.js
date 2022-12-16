@@ -11,7 +11,7 @@ function applydiscount(totalprice){
     if (totalprice>=discount.lowlimit){
         price=totalprice*(1-discount.low)
     }  
-return price
+return price;
 }
 
 
