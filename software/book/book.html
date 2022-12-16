@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Book Order</title>
+    <link rel="stylesheet" href="book.css">
+</head>
+
+<body>
+    <h1>Order Book</h2>
+    <img src="2232688.png" height="100" width="100"/>
+    <hr />
+
+    <label for="articleId">Article Id:</label><br>
+    <input list="books" id="articleId" type="text" /><br>
+    <datalist id="books">
+        <option value="id-100">Herr der Ringe</option>
+        <option value="id-101">Der Hobbit</option>
+        <option value="id-102">Das Silmarillion</option>
+    </datalist>
+
+    <label for="numberOfArticles">Number of Articles:</label><br>
+    <input type="number" min="0" value="1" id="numberOfArticles" type="text" />
+
+    <button onclick="doOrder()">Order</button><br>
+
+    <label for="totalPrice">total Price:</label><br>
+    <input id="totalPrice" type="text" /><br>
+
+</body>
+
+<script type="text/javascript" src="book.js"></script>
+<script type="text/javascript" src="discount.js"></script>
+<script type="text/javascript" src="order.js"></script>
+<script type="text/javascript" src="articles.js"></script>
+
+</html>
