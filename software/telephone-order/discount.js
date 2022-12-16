@@ -8,11 +8,10 @@ function applydiscount(totalprice){
     if (totalprice>=discount.highlimit){
         price=totalprice*(1-discount.high)
     }
-    if (totalprice>=discount.lowlimit){
+    elseif (totalprice>=discount.lowlimit){
         price=totalprice*(1-discount.low)
     }  
 return price;
-// console.log price
 }
 
 
