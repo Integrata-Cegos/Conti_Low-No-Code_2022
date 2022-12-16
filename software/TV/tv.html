@@ -7,11 +7,18 @@
 
 <body>
     <h3>Order TV</h3>
+    <label> ID </label> 
     <input id="articleId" type="text" />
-    <input id="quantity" type="text" />
-    <button onclick ="calculatePriceTV()">Order</button>
-    <input id="result" type="text" />
+    <label> Quantity</label> 
+    <input id="quantity" type="number" />
+    <button onclick ="doOrder()">Order</button>
+    <hr>
+    <label> TotalPrice</label> 
+    <input id="result" type="text" readonly />
     
 </body>
 <script type="text/javascript" src="tv.js"></script>
+<script type="text/javascript" src="order.js"></script>
+<script type="text/javascript" src="tvdiscount.js"></script>
+<script type="text/javascript" src="articles.js"></script>
 </html>
