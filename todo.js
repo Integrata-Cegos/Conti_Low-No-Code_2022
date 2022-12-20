@@ -7,11 +7,7 @@ const list = {
     DoAdd:  function(){
         let listItem = this.inputElement.value
         let Prio = this.prioInput.value
-        // let totalList = listItem
-        // this.outputElement.value = totalList
-        this.createList(listItem,Prio)
-        // this.appendItemToList(listItem,prioInput)
-        console.log (listItem,Prio,'in Add')
+        this.createList(listItem,Prio)       // console.log (listItem,Prio,'in Add')
     },
     
     createList: function(listEntry,Prio){
@@ -24,9 +20,8 @@ const list = {
             List.innerHTML = listEntry +' Prio:   '+Prio}
 
         let outputMsg=this.outputElement
-        console.log (outputMsg,' List in createList')
-        console.log (Prio,' Prio in createList')
-        console.log (this.outputElement,'intoList')
+        console.log (outputMsg,'OutputMsg   PrioListEntry:   '+Prio)
+        console.log (this.outputElement,'OutputElement   ListEntry:   '+listEntry)
         this.outputElement.appendChild(List)
     },
     
