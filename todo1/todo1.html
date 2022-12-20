@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>ToDo Liste</title>
+    <link rel="stylesheet" href="todo1.css">
+</head>
+
+<body>
+    <h3>ToDo Liste</h3>
+    <hr />
+
+    <span class="entry">Eintrag</span>
+    <input id="entryInput" type="text" /> <br>
+ 
+    <label for="prio">Priorität:</label>
+    <select name="Priority" id="prioInput"> 
+        <option value="low">low</option>
+        <option value="medium">medium</option>
+        <option value="high">high</option>
+    </select>
+
+    <button onclick="updateList.addButton()">Add</button>
+    <button onclick="updateList.clearButton()">Clear</button>
+
+    <output id="outputMessage" type="text">
+
+
+</body>
+<script type="text/javascript" src="todo1.js"></script>
+
+</html>
