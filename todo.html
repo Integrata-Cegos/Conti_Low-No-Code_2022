@@ -1,35 +1,30 @@
 <html>
 
 <head>
-    <title>ToDos</title>
-    <link rel="stylesheet" href="todo.css"> 
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="todo.css">
 </head>
 
 <body>
-    <h3>Todos</h3>
-   
-    <label for="input">New entry input</label>
-    <input id="input" type="text" />
-    <hr>
-    <label for="priority">Select priority</label>
-    <input list = "priorities" id="priority"/>
-    <datalist id="priorities">
-        <option value="Low">
-        <option value="Medium">
-        <option value="High">
-    </datalist>
-    <hr>
-    <button onclick="list.DoAdd()" >Add</button>
-    <button onclick="list.DoClear()" >Clear</button>
-    <hr>
-      <!-- <label for="output">New entry output</label>
-    <input id="output"  type="text" /> -->
+    <h3>ToDos</h3>
+    <hr />
+    <label for="entryInput">enter input:</label>
+    <input id="entryInput" type="text" /> <br>
+ 
+    <label for="prio">Priority:</label>
+    <select name="Priority" id="prioInput"> 
+        <option value="low">low</option>
+        <option value="medium">medium</option>
+        <option value="high">high</option>
+    </select>
 
-    <ul id="output">
+    <button onclick="updateList.addButton()">Add</button>
+    <button onclick="updateList.clearButton()">Clear</button>
 
-    </ul>
+    <output id="outputMessage" type="text">
+
 
 </body>
-<script type="text/javascript" src="ToDo.js"></script>
+<script type="text/javascript" src="todo.js"></script>
 
 </html>
