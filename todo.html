@@ -9,10 +9,20 @@
     <h3>Todo DR</h3>
     <label for="input">New entry input   :</label>
     <input id="input" type="text" />
+
+    <label for="prio">Priority:</label>
+    <select name="Priority" id="prioInput"> 
+        <option value="low">low</option>
+        <option value="medium">Medium</option>
+        <option value="HIGH">HIGH</option>
+    </select>
+
+
     <button onclick="list.DoAdd()" >Add</button>
     <button onclick="list.DoClear()" >Clear</button>
 
-    <ul id="output">
+    <ul id="output","output","prioInput">
+
     </ul>
 </body>
 <script type="text/javascript" src="ToDo.js"></script>
