@@ -1,17 +1,32 @@
 <html>
 
 <head>
-    <title>Javacream</title>
-    <link rel="stylesheet" href="ToDoNoLow.css">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="ToDoNoLow.css"> 
 </head>
 
 <body>
-    <h2>ToDos
-    </h2>
-    <input id="newentryinput">New Entry Input <type="text" />
-    <button onclick="calculatePrice()">Add</button>
-    <input id="newentryoutput">New Entry Output <type="text" />
+    <h2>Todos </h2>
+   
+    <label for="input">New entry input</label>
+    <input id="input" type="text" />
+    <label for="priority">Select priority</label>
+    <input list = "priorities" id="priority"/>
+    <datalist id="priorities">
+        <option value="Low">
+        <option value="Medium">
+        <option value="High">
+    </datalist>
+    <button onclick="list.DoAdd()" >Add</button>
+    <button onclick="list.DoClear()" >Clear</button>
+    <!-- <label for="output">New entry output</label>
+    <input id="output"  type="text" /> -->
+
+    <ul id="output">
+
+    </ul>
+
 </body>
-<script type="text/javascript" src="ToDoNoLow.css"></script>
 <script type="text/javascript" src="ToDoNoLow.js"></script>
+
 </html>

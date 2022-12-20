@@ -1,17 +1,27 @@
-let articleIdInput = document.getElementById("articleId")
-let numberOfArticlesInput = document.getElementById("numberOfArticles")
-let totalPriceOutput = document.getElementById("totalPrice")
-const articlePrice = 100
-function calculatePrice(){
-    let articleId = articleIdInput.value
-    let numberOfArticles = parseInt(numberOfArticlesInput.value)
-    let totalPrice = numberOfArticles * articlePrice
-    totalPrice = discount.apply(totalPrice)
-    let totalPriceMessage = createTotalPriceMessage(articleId, numberOfArticles, totalPrice)
-    totalPriceOutput.value = totalPriceMessage
+const list = {
 
-}
-
-function createTotalPriceMessage(articleId, numberOfArticles, totalPrice){
-    return `total price: ${numberOfArticles} articles with id ${articleId} cost: ${totalPrice}` 
-}
+    inputElement: document.getElementById("input"),
+    outputElement: document.getElementById("output"),
+    
+    DoAdd:  function(){
+        let listItem = this.inputElement.value
+        this.appendItemToList(listItem)
+    },
+    
+    appendItemToList: function(listEntry){
+        let newLi = document.createElement("li")
+        newLi.innerHTML = listEntry
+        this.outputElement.appendChild(newLi)
+    },
+    
+    DoClear: function() {
+    
+        while (this.outputElement.hasChildNodes()) {
+    
+            this.outputElement.removeChild(this.outputElement.firstChild)
+    
+        }
+    
+    }
+    
+    }
