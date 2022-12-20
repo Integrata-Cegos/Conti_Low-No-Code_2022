@@ -22,7 +22,7 @@ const act = {
             List.innerHTML = newEntry.toLowerCase()}
         if (prio == "high"){
             List.innerHTML = newEntry.toUpperCase()}
-        else {
+        if (prio == "medium"){
             List.innerHTML = newEntry}
 
         document.getElementById("todoList").appendChild(List)
