@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(201, 214, 181);
+}
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+#totalPrice{
+    width: 50%;
+}
