@@ -8,7 +8,7 @@ function addInput(){
     if (wert == "medium"){outputElement.value = input}
     else if (wert == "high"){outputElement.value = input.toUpperCase()}
     else {outputElement.value = input.toLowerCase()}
-
+}
 
 function deleteInput(){
     outputElement.value = ""
