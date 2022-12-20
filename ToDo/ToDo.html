@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Javacream</title>
+    <link rel="stylesheet" href="ToDo.css"> 
+</head>
+
+<body>
+    <h2>Todos </h2>
+
+    <img src="https://th.bing.com/th/id/OIP.wDyh4jI-Di0EFGbqVAShUQHaHa?w=206&h=206&c=7&r=0&o=5&pid=1.7" height="200" width="200">
+    <hr />
+    <label for="input">New Entry</label>
+    <input id="input" type="text" />
+    <label for="priority">Select priority</label>
+    <input list = "priorities" id="priority"/>
+    <datalist id="priorities">
+        <option value="Low">
+        <option value="Medium">
+        <option value="High">
+    </datalist>
+    <button onclick="list.DoAdd()" >Add</button>
+    <button onclick="list.DoClear()" >Clear</button>
+
+    <ul id="output">
+
+    </ul>
+
+</body>
+<script type="text/javascript" src="ToDo.js"></script>
+
+</html>

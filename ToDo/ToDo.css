@@ -1,0 +1,10 @@
+body {
+    background-color: rgb(47, 255, 193);
+}
+h2 {text-align: center;}
+h3 {
+    color: rgb(8, 61, 52);
+}
+#Output{
+    width: 30%
+}
