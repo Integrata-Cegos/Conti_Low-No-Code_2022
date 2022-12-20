@@ -1,0 +1,31 @@
+form {
+	border: thin solid rgb(225, 138, 31);
+	width: 20em;
+	padding: 1em;
+}
+
+legend {
+	font-size: 1.5em;
+	margin-bottom: 1em;
+}
+
+input[type=number] {
+	text-align: right;
+}
+
+label,
+span,
+output {
+	display: inline-block;
+	width: 8em;
+}
+
+form p {
+	font-weight: bold;
+}
+
+output {
+	width: 8em;
+	text-align: right;
+}
+
