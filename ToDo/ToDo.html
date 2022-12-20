@@ -18,17 +18,15 @@
     <button onclick="deleteElement()" class="clearBtn">Clear</button>
 
 <h3><ul id="myUL">
-    <li>Hit the gym</li>
-    <li class="checked">Pay bills</li>
-    <li>Meet George</li>
-    <li>Buy eggs</li>
-    <li>Read a book</li>
-    <li>Organize office</li>
-  </ul></h3>
-
-
-    
-
+    </ul></h3>
 </script>
 <h2><script type="text/javascript" src="ToDo.js"></script></h2>
 </html>
+
+<script>
+    function myFunction(){
+        let myInput = document.querySelector("#myInput");
+        let Priority = document.querySelector("#Priority");
+        Priority.innerHTML = myInput + Priority
+    }
+</script>
