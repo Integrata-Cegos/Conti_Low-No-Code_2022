@@ -1,5 +1,5 @@
 form {
-	border: thin solid rgb(225, 138, 31);
+	border: thin solid #666;
 	width: 20em;
 	padding: 1em;
 }
@@ -28,4 +28,3 @@ output {
 	width: 8em;
 	text-align: right;
 }
-
