@@ -2,7 +2,7 @@ const act = {
 
     prio: document.getElementById("prio"),
     todo: document.getElementById("todo"),
-    todoListe: document.getElementById("todoList"),
+    
 
 
     addToList: function(){
@@ -25,7 +25,7 @@ const act = {
         else {
             List.innerHTML = newEntry}
 
-        this.todoList.appendChild(List)
+        document.getElementById("todoList").appendChild(List)
     },
 
 
