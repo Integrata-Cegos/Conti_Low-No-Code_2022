@@ -18,20 +18,22 @@ const updateList = {
         let prioInput = this.prioInput.value
 
         this.createList(entryList, prioInput)
-
-        // let id = this.lastID + 1
-        // lastID = id
-        // List = this.outputMessage
-        // outputMessage.value = `${List} ${this.createListMessage(entryInput, prioInput, id)}`
     },
 
     createList: function(entryList, prioInput)  {
-
+        // new line
         let List = document.createElement("li")
-        List.innerHTML = prioInput + "   " + entryList
-        this.outputMessage.appendChild(List)
 
-        // return `ID: ${id} Prio: ${prioInput}          Message:  --->  ${entryInput}`
+
+        if (prioInput == "low"){
+            List.innerHTML = entryList.toLowerCase()}
+        if (prioInput == "high"){
+            List.innerHTML = entryList.toUpperCase()}
+        if (prioInput == "medium"){
+            List.innerHTML = entryList}
+
+            this.outputMessage=
+            this.outputMessage.appendChild(List)
     },
 
 
