@@ -5,3 +5,7 @@ function addInput(){
     let input = inputElement.value
     outputElement.value = input
 }
+
+function deleteInput(){
+    outputElement.value = ""
+}
