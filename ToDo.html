@@ -11,17 +11,21 @@
     <label for="input">New entry input</label>
     <input id="input" type="text" />
     <label for="priority">Select priority</label>
-    <input list = "priorities" id="priority"/>
+    <!-- <input list = "priorities" id="priority"/>
     <datalist id="priorities">
         <option value="Low">
         <option value="Medium">
         <option value="High">
-    </datalist>
+    </datalist> -->
+    <select name ="Priority" id = "priority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>  
+    </select>
+
     <button onclick="list.DoAdd()" >Add</button>
     <button onclick="list.DoClear()" >Clear</button>
-    <!-- <label for="output">New entry output</label>
-    <input id="output"  type="text" /> -->
-
+    
     <ul id="output">
 
     </ul>

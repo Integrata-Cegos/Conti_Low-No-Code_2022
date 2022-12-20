@@ -1,18 +1,29 @@
 const list = {
 
 inputElement: document.getElementById("input"),
+inputPriority: document.getElementById("priority"),
 outputElement: document.getElementById("output"),
 
 DoAdd:  function(){
     let listItem = this.inputElement.value
-    // let totalList = listItem
-    // this.outputElement.value = totalList
-    this.appendItemToList(listItem)
+    let prioInput = this.inputPriority.value
+
+    this.appendItemToList(listItem, prioInput)
 },
 
-appendItemToList: function(listEntry){
+appendItemToList: function(listEntry, prioInput){
     let newLi = document.createElement("li")
-    newLi.innerHTML = listEntry
+
+    if (prioInput =="Low") {
+        newLi.innerHTML = listEntry.toLowerCase() 
+    }
+    if (prioInput =="High") {
+        newLi.innerHTML = listEntry.toUpperCase()    
+    }
+    if  (prioInput =="Medium") {
+        newLi.innerHTML = listEntry 
+    }
+   
     this.outputElement.appendChild(newLi)
 },
 
@@ -24,6 +35,6 @@ DoClear: function() {
 
     }
 
-}
+},
 
 }
