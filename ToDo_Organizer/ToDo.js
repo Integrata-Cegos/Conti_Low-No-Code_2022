@@ -2,33 +2,41 @@
 
 // entryInput
 // prioInput
-// Output
+// outputMessage
 
 
 const updateList = {
 
     prioInput: document.getElementById(`prioInput`),
     entryInput: document.getElementById(`entryInput`),
-
-
+    outputMessage: document.getElementById(`outputMessage`),
 
 
     addButton: function(){
 
-        let entryInput = this.entryInput.value
+        let entryList = this.entryInput.value
         let prioInput = this.prioInput.value
 
-        output.value = this.createListMessage(entryInput, prioInput)
+        this.createList(entryList, prioInput)
 
+        // let id = this.lastID + 1
+        // lastID = id
+        // List = this.outputMessage
+        // outputMessage.value = `${List} ${this.createListMessage(entryInput, prioInput, id)}`
     },
 
-    createListMessage: function(entryInput, prioInput)  {
-        return `Prio: ${prioInput}                 Message:  --->  ${entryInput}`
+    createList: function(entryList, prioInput)  {
+
+        let List = document.createElement("li")
+        List.innerHTML = prioInput + "   " + entryList
+        this.outputMessage.appendChild(List)
+
+        // return `ID: ${id} Prio: ${prioInput}          Message:  --->  ${entryInput}`
     },
 
 
     clearButton: function () {
-        output.value = ""
+        outputMessage.value = ""
     },
 
     
