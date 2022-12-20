@@ -1,29 +1,37 @@
-const list = {
+const updateList = {
 
-    inputElement: document.getElementById("input"),
-    outputElement: document.getElementById("output"),
-    
-    DoAdd:  function(){
-        let listItem = this.inputElement.value
-        // let totalList = listItem
-        // this.outputElement.value = totalList
-        this.appendItemToList(listItem)
+    prioInput: document.getElementById(`prioInput`),
+    entryInput: document.getElementById(`entryInput`),
+    outputMessage: document.getElementById(`outputMessage`),
+
+
+    addButton: function(){
+
+        let entryList = this.entryInput.value
+        let prioInput = this.prioInput.value
+
+        this.createList(entryList, prioInput)
     },
-    
-    appendItemToList: function(listEntry){
-        let newLi = document.createElement("li")
-        newLi.innerHTML = listEntry
-        this.outputElement.appendChild(newLi)
+
+    createList: function(entryList, prioInput)  {
+        let List = document.createElement("li")
+
+
+        if (prioInput == "low"){
+            List.innerHTML = entryList.toLowerCase()}
+        if (prioInput == "high"){
+            List.innerHTML = entryList.toUpperCase()}
+        if (prioInput == "medium"){
+            List.innerHTML = entryList}
+
+            this.outputMessage=
+            this.outputMessage.appendChild(List)
     },
+
+
+    clearButton: function () {
+        outputMessage.value = ""
+    },
+
     
-    DoClear: function() {
-    
-        while (this.outputElement.hasChildNodes()) {
-    
-            this.outputElement.removeChild(this.outputElement.firstChild)
-    
-        }
-    
-    }
-    
-    }
+}
