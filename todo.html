@@ -3,6 +3,12 @@
 <head>
     <title>ToDo List</title>
     <link rel="stylesheet" href="todo.css">
+<style>
+p {
+  color: yellow;
+}
+
+</style>
 </head>
 
 <body>
@@ -10,9 +16,8 @@
     <hr />
     <label for="entryInput">enter input:</label>
     <input id="entryInput" type="text" /> <br>
- 
     <label for="prio">Priority:</label>
-    <select name="Priority" id="prioInput"> 
+    <select name="Priority" id="prioInput">
         <option value="low">low</option>
         <option value="medium">medium</option>
         <option value="high">high</option>
@@ -20,9 +25,9 @@
 
     <button onclick="updateList.addButton()">Add</button>
     <button onclick="updateList.clearButton()">Clear</button>
-
+    
+    <p p>
     <output id="outputMessage" type="text">
-
 
 </body>
 <script type="text/javascript" src="todo.js"></script>
