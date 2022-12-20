@@ -6,13 +6,29 @@
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
 </head>
 
-<body>
-    <h2>To Do's
-    <hr />
-    <h3><input id="new entry input" oninput="userInput()" type="text">
-    <button>Add</button>
-    <input id="new entry output" type="text"></h3>
+    <h2>To Do List</title>
+    <hr> 
+    <input type="text" id="myInput">
+    <select name="Priority" id="Priority">
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select>
+    <button onclick="newElement()" class="addBtn">Add</button>
+    <button onclick="deleteElement()" class="clearBtn">Clear</button>
 
-</body>
-<script type="text/javascript" src="ToDo.js"></script>
+<h3><ul id="myUL">
+    <li>Hit the gym</li>
+    <li class="checked">Pay bills</li>
+    <li>Meet George</li>
+    <li>Buy eggs</li>
+    <li>Read a book</li>
+    <li>Organize office</li>
+  </ul></h3>
+
+
+    
+
+</script>
+<h2><script type="text/javascript" src="ToDo.js"></script></h2>
 </html>
