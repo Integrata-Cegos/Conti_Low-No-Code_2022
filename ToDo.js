@@ -14,6 +14,16 @@ appendItemToList: function(listEntry){
     let newLi = document.createElement("li")
     newLi.innerHTML = listEntry
     this.outputElement.appendChild(newLi)
+},
+
+DoClear: function() {
+
+    while (this.outputElement.hasChildNodes()) {
+
+        this.outputElement.removeChild(this.outputElement.firstChild)
+
+    }
+
 }
 
 }
