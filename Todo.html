@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Todo List</title>
+    <link rel="stylesheet" href="Todo.css">
+    <img src="47716_g.jpg" height="150" width="150"/>
+</head>
+
+<body>
+    <h2>ToDo List</h2>
+    <b>HIER TODO EINGEBEN:</b>
+    <input id="todo" type="text" >
+    
+    <label for="prio"> <b>AUSWAHL PRIO:</b> </label>
+    <select name="prio" id="">
+    <option value="high">HIGH</option>
+    <option value="medium">Medium</option>
+    <option value="low">low</option>
+    </select>
+    <button onclick="addToList()">TODO HINZUFÜGEN</button>
+    <p p>
+    <ul id="todoList">
+    </ul>
+    <button onclick="deleteList()">LISTE LÖSCHEN</button>
+</body>
+<script type="text/javascript" src="Todo.js"></script>
+</html>

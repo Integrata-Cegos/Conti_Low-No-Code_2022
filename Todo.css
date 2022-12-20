@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(140, 192, 240);
+}
+h2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: broadway;
+    font-size: 40px;
+}
+div {
+    background-color: rgb(12, 5, 114);
+    color: white;
+  }
+h1 {
+    text-align: center;
+}
+#todo{
+    width: 60%;
+    text-align: left;
+}
+#list{
+    width: 90%
+}
