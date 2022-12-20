@@ -2,28 +2,26 @@
 
 <head>
     <title>ToDo List</title>
-    <link rel="stylesheet" href="Computer.css">
+    <link rel="stylesheet" href="ToDo.css">
 </head>
 
 <body>
     <h3>ToDo List</h3>
-
     <hr />
-    <span class="entry input">new entry input</span>
-    <input type="text" />
 
-<!--insert dropdown--> 
+    <span class="entry">new entry input</span>
+    <input id="entryInput" type="text" /> <br>
+ 
     <label for="prio">Priority:</label>
-
-    <select name="Priority" id="prio"> 
-    <option value="low">low</option>
-    <option value="medium">medium</option>
-    <option value="high">high</option>
+    <select name="Priority" id="prioInput"> 
+        <option value="low">low</option>
+        <option value="medium">medium</option>
+        <option value="high">high</option>
     </select>
 
-    <button onclick="computer.doOrder()">Add</button>
-    <button onclick="computer.doOrder()">Clear</button>
-    <output id="totalPrice" type="text">
+    <button onclick="updateList.addButton()">Add</button>
+    <button onclick="updateList.clearButton()">Clear</button>
+    <output id="output" type="text">
 </body>
 <script type="text/javascript" src="ToDo.js"></script>
 
