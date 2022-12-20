@@ -24,7 +24,6 @@ const updateList = {
         // new line
         let List = document.createElement("li")
 
-
         if (prioInput == "low"){
             List.innerHTML = entryList.toLowerCase()}
         if (prioInput == "high"){
@@ -32,7 +31,6 @@ const updateList = {
         if (prioInput == "medium"){
             List.innerHTML = entryList}
 
-            this.outputMessage=
             this.outputMessage.appendChild(List)
     },
 
